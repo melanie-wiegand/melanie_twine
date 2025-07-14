@@ -17,7 +17,8 @@ defmodule MelanieTwineWeb.Router do
   scope "/", MelanieTwineWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    # get "/", PageController, :home
+    live "/", HomePageLive
   end
 
   # Other scopes may use custom stacks.
