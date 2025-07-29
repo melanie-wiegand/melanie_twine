@@ -1,32 +1,182 @@
-<header class="px-4 sm:px-6 lg:px-8">
+<header class="fixed top-0 left-0 w-full z-50 bg-darkpurple text-white px-4 sm:px-6 lg:px-8 shadow">
   <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
+    
+    <!-- Logo -->
     <div class="flex items-center gap-4">
       <a href="/">
-        <img src={~p"/images/logo.svg"} width="36" />
+        <img src={~p"/images/Purple_Logo_White_Twine.svg"} width="200" />
       </a>
-      <p class="bg-brand/5 text-brand rounded-full px-2 font-medium leading-6">
-        v{Application.spec(:phoenix, :vsn)}
-      </p>
     </div>
-    <div class="flex items-center gap-4 font-semibold leading-6 text-zinc-900">
-      <a href="https://twitter.com/elixirphoenix" class="hover:text-zinc-700">
-        @elixirphoenix
-      </a>
-      <a href="https://github.com/phoenixframework/phoenix" class="hover:text-zinc-700">
-        GitHub
-      </a>
-      <a
-        href="https://hexdocs.pm/phoenix/overview.html"
-        class="rounded-lg bg-zinc-100 px-2 py-1 hover:bg-zinc-200/80"
+
+
+    <!-- hamburger menu for small widths -->
+    <div class="lg:hidden flex items-center justify-end space-x-4">
+      <!-- Language dropdown -->
+      <select
+        id="language-select-small"
+        value={Gettext.get_locale()}
+        onchange="
+          const lang = this.value;
+          const url = new URL(window.location.href);
+          url.searchParams.set('lang', lang);
+          window.location.href = url.toString();
+        "
+        class="bg-darkpurple text-white border border-white rounded-full px-2 py-1 w-full"
       >
-        Get Started <span aria-hidden="true">&rarr;</span>
-      </a>
+        <option value="en" selected={Gettext.get_locale() == "en"}>🇬🇧 English</option>
+        <option value="sv" selected={Gettext.get_locale() == "sv"}>🇸🇪 Svenska</option>
+      </select>
+
+      <!-- hamburger icon -->
+      <button
+        id="menu-toggle"
+        class="text-white text-xl leading-none focus:outline-none"
+        onclick="
+          const menu = document.getElementById('small-menu');
+          const btn = document.getElementById('menu-toggle');
+          menu.classList.toggle('hidden');
+          btn.textContent = menu.classList.contains('hidden') ? '☰' : '✕';
+        "
+        >
+        ☰
+      </button>
     </div>
+
+    <!-- nav bar -->
+    <nav class="hidden lg:flex items-center space-x-6">
+      <.link href="/integrations" class="hover:text-midpurple font-medium"><%= gettext("Integrationer") %></.link>
+      <.link href="/offer" class="hover:text-midpurple font-medium"><%= gettext("Vårt erbjudande") %></.link>
+      <.link href="/security" class="hover:text-midpurple font-medium"><%= gettext("Säkerhet") %></.link>
+      <.link href="/current" class="hover:text-midpurple font-medium"><%= gettext("Aktuellt") %></.link>
+      <.link href="/about" class="hover:text-midpurple font-medium"><%= gettext("Om oss") %></.link>
+      <.link href="/contact" class="hover:text-midpurple font-medium"><%= gettext("Kontakt") %></.link>
+
+
+    <!-- Language dropdown -->
+    <% current_locale = Gettext.get_locale() %>
+    <select
+      id="language-select"
+      value={Gettext.get_locale()}
+      onchange="
+        const lang = this.value;
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      "
+      class="bg-darkpurple text-white border border-white rounded-full px-2 py-1"
+    >
+      <option value="en" selected={current_locale == "en"}>🇬🇧 English</option>
+      <option value="sv" selected={current_locale == "sv"}>🇸🇪 Svenska</option>
+    </select>
+
+    <script>
+      function changeLang(lang) {
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
+        window.location.href = url.toString();
+      }
+    </script>
+    </nav>
+
+  </div>
+
+  <!-- hamburger menu dropdown -->
+  <div id="small-menu" class="lg:hidden hidden px-4 pb-4 space-y-2 text-sm">
+    <.link href="/integrations" class="block hover:text-midpurple font-medium"><%= gettext("Integrationer") %></.link>
+    <.link href="/offer" class="block hover:text-midpurple font-medium"><%= gettext("Vårt erbjudande") %></.link>
+    <.link href="/security" class="block hover:text-midpurple font-medium"><%= gettext("Säkerhet") %></.link>
+    <.link href="/current" class="block hover:text-midpurple font-medium"><%= gettext("Aktuellt") %></.link>
+    <.link href="/about" class="block hover:text-midpurple font-medium"><%= gettext("Om oss") %></.link>
+    <.link href="/contact" class="block hover:text-midpurple font-medium"><%= gettext("Kontakt") %></.link>
   </div>
 </header>
-<main class="px-4 py-20 sm:px-6 lg:px-8">
-  <div class="mx-auto max-w-2xl">
-    <.flash_group flash={@flash} />
-    {@inner_content}
-  </div>
+
+<main class="pt-2 w-full"> 
+  <%= @inner_content %>
 </main>
+
+<footer class="relative text-white overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-darkpurple to-midpurple z-0"></div>
+  <!-- "Twine" overlay -->
+  <h1 class="absolute -bottom-5 left-1/2 -translate-x-1/2 text-[35vw] font-extrabold text-white/5 pointer-events-none select-none z-0 leading-none whitespace-nowrap">
+    Twine
+  </h1>
+
+  <!-- columns -->
+  <div class="relative z-10 pl-6 pr-10 pt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-16">
+    <!-- logo -->
+    <div>
+      <img src="/images/whitelogotextbottom.png" alt="Twine Logo" class="w-20 mb-4" />
+    </div>
+
+    <!-- explore -->
+    <div>
+      <h4 class="text-sm font-semibold mb-2">Utforska</h4>
+      <ul class="space-y-1 text-sm opacity-90">
+        <li><a href="#" class="hover:underline">Karriär</a></li>
+        <li><a href="/about" class="hover:underline">Om oss</a></li>
+      </ul>
+    </div>
+
+    <!-- terms -->
+    <div>
+      <h4 class="text-sm font-semibold mb-2">Villkor</h4>
+      <ul class="space-y-1 text-sm opacity-90">
+        <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+        <li><a href="/security" class="hover:underline">Security</a></li>
+        <li><a href="#" class="hover:underline">Status</a></li>
+        <li><a href="#" class="hover:underline">Terms of Service</a></li>
+        <li><a href="#" class="hover:underline">Visselblåsning</a></li>
+      </ul>
+    </div>
+
+    <!-- contact us-->
+    <div>
+      <h4 class="text-sm font-semibold mb-2">Kontakta oss</h4>
+      <ul class="space-y-1 text-sm opacity-90">
+        <p>Twine Integrations</p>
+        <p>Klarabergsviadukten 63</p>
+        <p>111 64 Stockholm</p>
+        <p> </p>
+        <p>hello@twine.se</p>
+      </ul>
+    </div>
+
+    <!-- follow us -->
+    <div>
+      <h4 class="text-sm font-semibold mb-2">Följ oss</h4>
+      <ul class="space-y-1 text-sm opacity-90">
+        <li><a href="#" class="hover:underline">Facebook</a></li>
+        <li><a href="#" class="hover:underline">Linkedin</a></li>
+      </ul>
+    </div>
+
+    <!-- newsletter -->
+    <div>
+      <h4 class="text-lg font-semibold mb-2">Vill du ha de senaste uppdateringarna?</h4>
+      <p class="text-sm pb-2">Glöm inte prenumerera på vårt nyhetsbrev!</p>
+      
+      <form class="space-y-3">
+        <div class="relative w-full">
+          <input type="email" placeholder="Skriv din mail här"
+                class="w-full rounded-full px-4 py-2 pr-12 text-black placeholder:text-gray-500 bg-white focus:outline-none" />
+
+          <!-- Arrow submit button -->
+          <button type="submit"
+                  class="absolute top-1/2 right-2 -translate-y-1/2 p-2 rounded-full hover:bg-gray-200 transition">
+            <img src="/images/submitarrow.png" alt="Arrow" class="w-6 h-6" />
+          </button>
+        </div>
+        <label class="flex items-start text-xs mt-2 gap-2">
+          <input type="checkbox" />
+          <span>Jag godkänner att Twine Integrations använder mina personuppgifter i enlighet med deras integritetspolicy.</span>
+        </label>
+      </form>
+    </div>
+  </div>
+
+  <!-- copyright -->
+  <div class="relative z-10 text-center text-xs text-white mt-10 pb-5">
+    Copyright ©2024 Twine
+  </div>
+</footer>

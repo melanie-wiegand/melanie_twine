@@ -5,9 +5,11 @@ defmodule MelanieTwineWeb.Router do
     plug :accepts, ["html"]
     plug :fetch_session
     plug :fetch_live_flash
+    plug MelanieTwineWeb.Plugs.SetLocale
     plug :put_root_layout, html: {MelanieTwineWeb.Layouts, :root}
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    # plug MelanieTwineWeb.Plugs.SetLocale
   end
 
   pipeline :api do
@@ -17,8 +19,16 @@ defmodule MelanieTwineWeb.Router do
   scope "/", MelanieTwineWeb do
     pipe_through :browser
 
-    # get "/", PageController, :home
-    live "/", HomePageLive
+
+    live_session :default, on_mount: MelanieTwineWeb.Live.SetLocale do
+      live "/", HomePageLive
+      live "/integrations", IntegrationsLive
+      live "/offer", OfferLive
+      live "/security", SecurityLive
+      live "/current", CurrentLive
+      live "/about", AboutLive
+      live "/contact", ContactLive
+    end
   end
 
   # Other scopes may use custom stacks.

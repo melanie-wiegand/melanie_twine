@@ -1,0 +1,17 @@
+msgid "Integrationer"
+msgstr "Integrationer"
+
+msgid "Vårt erbjudande"
+msgstr "Vårt erbjudande"
+
+msgid "Säkerhet"
+msgstr "Säkerhet"
+
+msgid "Aktuellt"
+msgstr "Aktuellt"
+
+msgid "Om oss"
+msgstr "Om oss"
+
+msgid "Kontakt"
+msgstr "Kontakt"

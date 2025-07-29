@@ -1,0 +1,20 @@
+msgid "Integrationer"
+msgstr "Integrations"
+
+msgid "Vårt erbjudande"
+msgstr "Our Offer"
+
+msgid "Säkerhet"
+msgstr "Security"
+
+msgid "Aktuellt"
+msgstr "News"
+
+msgid "Om oss"
+msgstr "About Us"
+
+msgid "Kontakt"
+msgstr "Contact"
+
+msgid "Utforska mer"
+msgstr "Explore more"

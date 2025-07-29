@@ -1,9 +1,10 @@
 defmodule MelanieTwineWeb.HomePageLive do
   use MelanieTwineWeb, :live_view
 
-  def render(assigns) do
-    ~H"""
-    <div>New homepage</div>
-    """
+  on_mount MelanieTwineWeb.Live.SetLocale
+
+  @impl true
+  def mount(_params, _session, socket) do
+    {:ok, socket}
   end
 end

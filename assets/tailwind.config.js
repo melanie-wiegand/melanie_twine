@@ -15,7 +15,16 @@ module.exports = {
     extend: {
       colors: {
         brand: "#FD4F00",
-      }
+        darkpurple: '#1E003A',
+        midpurple: '#7600FF',
+        lightpurple: '#F7F2FC'
+      },
+      backgroundImage: {
+        'purple-gradient': 'linear-gradient(to bottom, #1E003A, #7600FF)',
+      },
+      fontFamily: {
+        grotesk: ['"Space Grotesk"', 'sans-serif'],
+      },
     },
   },
   plugins: [
