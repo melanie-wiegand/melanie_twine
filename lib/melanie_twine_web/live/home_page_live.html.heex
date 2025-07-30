@@ -16,11 +16,11 @@
     </div>
 
     <!-- two images side by side -->
-    <div class="mt-10 flex justify-center items-stretch gap-12 px-4">
+    <div class="mt-10 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 px-4">
       <!-- left image + text -->
       <div class="flex flex-col justify-between max-w-md w-full flex-grow">
         <div class="mb-4">
-          <p class="text-xl">Förenkla HR med våra smarta lösningar.</p>
+          <p class="text-xl text-center md:text-left">Förenkla HR med våra smarta lösningar.</p>
         </div>
         <img src="/images/laptop.png" alt="Laptop"
             class="h-full w-full object-contain" />
@@ -57,7 +57,7 @@
 
     </div>
 
-    <div class="relative w-full max-w-4xl mx-auto pb-48">
+    <div class="relative w-full max-w-4xl mx-auto pb-48 md:pb-60 lg:pb-72">
       <img src="/images/flowmap.png" alt="Flow Map" class="w-full h-auto pb-10" />
       <div class="flex flex-col items-center">
         <button class="bg-midpurple text-white px-6 py-3 rounded-full w-auto">
@@ -151,15 +151,17 @@
             </div>
         </section>
 
-        <div class="absolute w-full px-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-            <img src="/images/backgroundimg.png" alt="BackgroundImg" class="w-full h-auto" />
+        <div class="py-5 lg:py-50">
+          <div class="absolute w-full px-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
+              <img src="/images/backgroundimg.png" alt="BackgroundImg" class="w-full h-auto" />
 
-            <div class="absolute inset-0 flex items-center">
-                <div class="text-white text-center px-6 lg:px-20">
-                    <h1 class="text-4xl font-bold font-grotesk">Sömlöst med Twine.</h1>
-                    <p class="text-lg mt-2">Twine revolutionerar ert HR-ekosystem genom att erbjuda en egen integrationsmotor som sömlöst ansluter och synkroniserar era HR- och lönerelaterade system så ni sparar både tid och resurser.</p>
-                </div>
-            </div>
+              <div class="absolute inset-0 flex items-center">
+                  <div class="text-white text-center px-6 lg:px-20">
+                      <h1 class="text-4xl font-bold font-grotesk">Sömlöst med Twine.</h1>
+                      <p class="text-lg mt-2">Twine revolutionerar ert HR-ekosystem genom att erbjuda en egen integrationsmotor som sömlöst ansluter och synkroniserar era HR- och lönerelaterade system så ni sparar både tid och resurser.</p>
+                  </div>
+              </div>
+          </div>
         </div>
 
         <!-- light purple bg section -->
@@ -169,8 +171,8 @@
                 <p class="text-sm font-grotesk">Använd Twine för att förbättra din vardag sömlöst.</p>
             </div>
         
-            <!-- phone img next to "case" -->
-            <div class="mt-10 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 max-w-6xl mx-auto px-4">  
+            <!-- phone img next to case -->
+            <div class="mt-10 pb-16 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 max-w-6xl mx-auto px-4">  
                 <!-- image -->
                 <div class="flex-1 flex items-center justify-center md:justify-end pl-5">
                     <img src="/images/phoneimg.png" alt="PhoneImg" class="w-full max-w-md h-auto object-contain" />     
@@ -179,7 +181,7 @@
                 <div class="relative max-w-xs">
                     <img src="/images/lightpurplebox.png" alt="LightPurpleBox" class="w-full h-auto object-contain" />
 
-                    <div class="absolute inset-2 flex flex-col items-start justify-center px-4">
+                    <div class="absolute inset-2 flex flex-col items-start justify-center px-4 pt-24">
                     <div class="inline-block border border-black rounded-full px-6 py-2 mb-4 font-bold text-black">
                         CASE
                     </div>
@@ -187,7 +189,6 @@
                     Vårt system har hjälp Fortnox genom åren
                     </h1>
                     <p class="text-lg mt-2 text-black pb-20  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et varius mauris. Vestibulum lacinia ipsum enim, ut aliquet massa varius eget. Morbi bibendum egestas semper. Cras feugiat orci vitae orci tempus.</p>
-
                     </div>      
                 </div>
             </div>  

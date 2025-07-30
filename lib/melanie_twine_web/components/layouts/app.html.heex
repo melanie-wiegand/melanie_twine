@@ -1,4 +1,5 @@
 <header class="fixed top-0 left-0 w-full z-50 bg-darkpurple text-white px-4 sm:px-6 lg:px-8 shadow">
+  <% locale = Gettext.get_locale() %>
   <div class="flex items-center justify-between border-b border-zinc-100 py-3 text-sm">
     
     <!-- Logo -->
@@ -13,18 +14,22 @@
     <div class="lg:hidden flex items-center justify-end space-x-4">
       <!-- Language dropdown -->
       <select
-        id="language-select-small"
-        value={Gettext.get_locale()}
+        id="small-language-select"
         onchange="
           const lang = this.value;
-          const url = new URL(window.location.href);
-          url.searchParams.set('lang', lang);
-          window.location.href = url.toString();
+          const url = new window.URL(window.location.href);
+          const currentLang = url.searchParams.get('lang');
+          if (currentLang !== lang) {
+            url.searchParams.set('lang', lang);
+            window.location.href = url.toString();
+          } else {
+            window.location.reload();
+          }
         "
-        class="bg-darkpurple text-white border border-white rounded-full px-2 py-1 w-full"
+        class="bg-darkpurple text-white border border-white rounded-full px-2 py-1"
       >
-        <option value="en" selected={Gettext.get_locale() == "en"}>🇬🇧 English</option>
-        <option value="sv" selected={Gettext.get_locale() == "sv"}>🇸🇪 Svenska</option>
+        <option value="en" selected={locale == "en"}>🇬🇧 English</option>
+        <option value="sv" selected={locale == "sv"}>🇸🇪 Svenska</option>
       </select>
 
       <!-- hamburger icon -->
@@ -53,29 +58,24 @@
 
 
     <!-- Language dropdown -->
-    <% current_locale = Gettext.get_locale() %>
     <select
-      id="language-select"
-      value={Gettext.get_locale()}
+      id="wide-language-select"
       onchange="
         const lang = this.value;
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        window.location.href = url.toString();
+        const url = new window.URL(window.location.href);
+        const currentLang = url.searchParams.get('lang');
+        if (currentLang !== lang) {
+          url.searchParams.set('lang', lang);
+          window.location.href = url.toString();
+        } else {
+          window.location.reload();
+        }
       "
       class="bg-darkpurple text-white border border-white rounded-full px-2 py-1"
     >
-      <option value="en" selected={current_locale == "en"}>🇬🇧 English</option>
-      <option value="sv" selected={current_locale == "sv"}>🇸🇪 Svenska</option>
+      <option value="en" selected={locale == "en"}>🇬🇧 English</option>
+      <option value="sv" selected={locale == "sv"}>🇸🇪 Svenska</option>
     </select>
-
-    <script>
-      function changeLang(lang) {
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        window.location.href = url.toString();
-      }
-    </script>
     </nav>
 
   </div>
