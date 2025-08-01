@@ -11,8 +11,18 @@ module.exports = {
     "../lib/melanie_twine_web.ex",
     "../lib/melanie_twine_web/**/*.*ex"
   ],
+
   theme: {
     extend: {
+      animation: {
+        scroll: 'scroll 20s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       colors: {
         brand: "#FD4F00",
         darkpurple: '#1E003A',
@@ -27,6 +37,7 @@ module.exports = {
       },
     },
   },
+
   plugins: [
     require("@tailwindcss/forms"),
     // Allows prefixing tailwind classes with LiveView classes to add rules

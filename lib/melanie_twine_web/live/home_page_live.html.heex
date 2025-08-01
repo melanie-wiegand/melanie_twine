@@ -83,75 +83,123 @@
     <div class="relative w-full">
 
         <!-- how we help section -->
-        <section class="bg-gradient-to-b from-midpurple to-darkpurple text-white py-20 relative">
-            <div class="max-w-6xl mx-auto px-4 relative">
-            
-            <!-- vertical line in the center -->
-            <div class="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 h-[500px] border-l border-white"></div>
+        <section class="bg-gradient-to-b from-midpurple to-darkpurple text-white py-10 relative">
+          <div class="max-w-6xl mx-auto px-4 relative">
 
-            <!-- middle dots -->
-            <div class="hidden md:block absolute left-1/2 top-0 transform -translate-x-1/2 z-10 flex flex-col justify-between h-[420px] py-2">
-                <!-- dot 1 -->
-                <div class="w-4 h-4 border border-white rounded-full bg-midpurple mb-48"></div>
-                <!-- dot 2 -->
-                <div class="w-4 h-4 border border-white rounded-full bg-midpurple mb-48"></div>
-                <!-- dot 3 -->
-                <div class="w-4 h-4 border border-white rounded-full bg-midpurple"></div>
+            <!-- wide screen grid -->
+
+            <!-- vertical line in the center -->
+            <div class="hidden md:block absolute top-0 left-1/2 transform -translate-x-1/2 md:h-[480px] lg:h-[420px] border-l border-white"></div>
+
+            <div class="hidden md:grid grid-cols-[1fr_32px_1fr] gap-x-6 gap-y-16 items-start text-left z-10 max-w-5xl mx-auto">
+
+              <!-- row 1 -->
+              <div class="text-right pt-10 lg:pt-5">
+                <div class="inline-block border border-white rounded-full px-3 py-3 font-bold mb-4">Problem</div>
+              </div>
+
+              <div class="flex flex-col pt-14 lg:pt-8 items-center justify-start relative">                
+                <div class="w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+              </div>
+
+              <div class="pl-1">
+                <p>
+                  Varje europeiskt land har ett eget HR-systemslandskap, så även Sverige. Många företag har mängder av verktyg som de skulle behöva integrera men avstår då det är både komplicerat och dyrt.
+                </p>
+              </div>
+
+              <!-- row 2 -->
+              <div class="text-right">
+                <p>
+                  Man anlitar en extern utvecklingskonsult eller nyttjar intern kompetens. Det är dyrt och tar veckor, eller till och med månader, att lägga till en enda integration som i slutändan sällan fungerar.
+                </p>
+              </div>
+
+              <div class="flex flex-col pt-12 items-center justify-start relative">                
+                <div class="w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+              </div>
+
+              <div class="pt-8">
+                <div class="inline-block border border-white rounded-full px-3 py-3 font-bold mb-4">Nuvarande lösning</div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="text-right pt-8">
+                <div class="inline-block border border-white rounded-full px-3 py-2 font-bold mb-4">Twine</div>
+              </div>
+
+              <div class="flex flex-col pt-12 items-center justify-start relative">                
+                <div class="w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+              </div>
+
+              <div class="">
+                <p>
+                  Med Twine kan du få integrationer till alla verktyg på ett tryggt och säkert sätt genom vår API. Dessutom tar det betydligt mindre tid och kostar en bråkdel av vad en egenbyggd integration gör.
+                </p>
+              </div>
             </div>
 
-            <!-- left & right items -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-y-16 md:gap-y-20 items-start relative text-center md:text-left z-10">
-
-                <!-- block 1 -->
-                <div class="md:text-right md:pr-12">
-                  <div class="inline-block border border-white rounded-full px-6 py-2 font-bold mb-4">
-                    Problem
+            <!-- mobile view -->
+            <block class="md:hidden">
+              <!-- row 1 -->
+              <div class="absolute top-0 left-[80px] transform -translate-x-1/2 h-[480px] border-l border-white"></div>
+              <div class=" grid grid-cols-1 pr-10">
+                <div class="flex items-left pt-6 pl-[56px]">
+                  <div class="mt-4 w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+                  <div class="text-left pl-5">
+                    <div class="inline-block border border-white rounded-full px-3 py-2 font-bold mb-4">Problem</div>
                   </div>
                 </div>
-                <div class="md:pl-12">
-                  <p>
-                    Varje europeiskt land har ett eget HR-systemslandskap, så även Sverige. Många företag har mängder av verktyg som de skulle behöva integrera men avstår då det är både komplicerat och dyrt.
-                  </p>
+
+                <div class="pl-[100px]">
+                <p>
+                  Varje europeiskt land har ett eget HR-systemslandskap, så även Sverige. Många företag har mängder av verktyg som de skulle behöva integrera men avstår då det är både komplicerat och dyrt.
+                </p>
                 </div>
 
-
-                <!-- block 2 -->
-                <div class="md:text-right md:pr-12">
-                  <div class="inline-block border border-white rounded-full px-6 py-2 font-bold mb-4">
-                    Nuvarande lösning
+                <!-- row 2 -->
+                <div class="flex items-left pt-6 pl-[56px]">
+                  <div class="mt-4 w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+                  <div class="text-left pl-5">
+                    <div class="inline-block border border-white rounded-full px-3 py-2 font-bold mb-4">Nuvarande lösning</div>
                   </div>
                 </div>
-                <div class="md:pl-12">
+
+                <div class="pl-[100px]">
                   <p>
                     Man anlitar en extern utvecklingskonsult eller nyttjar intern kompetens. Det är dyrt och tar veckor, eller till och med månader, att lägga till en enda integration som i slutändan sällan fungerar.
                   </p>
                 </div>
 
-
-                <!-- block 3 -->
-                <div class="md:text-right md:pr-12">
-                  <div class="inline-block border border-white rounded-full px-6 py-2 font-bold mb-4">
-                    Twine
+                <!-- row 3 -->
+                <div class="flex items-left pt-6 pl-[56px]">
+                  <div class="mt-4 w-4 h-4 border border-white rounded-full bg-midpurple z-10"></div>
+                  <div class="text-left pl-5">
+                    <div class="inline-block border border-white rounded-full px-3 py-2 font-bold mb-4">Twine</div>
                   </div>
                 </div>
-                <div class="md:pl-12">
+
+                <div class="pl-[100px]">
                   <p>
                     Med Twine kan du få integrationer till alla verktyg på ett tryggt och säkert sätt genom vår API. Dessutom tar det betydligt mindre tid och kostar en bråkdel av vad en egenbyggd integration gör.
                   </p>
                 </div>
 
+              </div>      
+            </block>
+
+            <!-- Buttons -->
+            <div class="pt-20 lg:pt-36 flex flex-col md:flex-row justify-center gap-4 lg:gap-20 max-w-xs mx-auto md:max-w-none">
+              <button class="bg-white text-darkpurple font-bold px-3 py-3 rounded-full w-full md:w-auto">Kom igång</button>
+              <button class="border border-white text-white font-bold px-3 py-3 rounded-full w-full md:w-auto">Prata med oss</button>
             </div>
 
-            <div class="mt-12 flex flex-col md:flex-row justify-center gap-4 max-w-xs mx-auto md:max-w-none">
-              <button class="bg-white text-darkpurple font-bold px-6 py-3 rounded-full w-full md:w-auto">Kom igång</button>
-              <button class="border border-white text-white font-bold px-6 py-3 rounded-full w-full md:w-auto">Prata med oss</button>
-            </div>
-
-            <p class="text-center mt-8 opacity-80 pb-36">Använd Twine för att förbättra din vardag sömlöst.</p>
-            </div>
+            <p class="text-center mt-8 pt-15 pb-20 md:pb-36 lg:pb-48">Använd Twine för att förbättra din vardag sömlöst.</p>
+          </div>
         </section>
 
-        <div class="py-5 lg:py-50">
+
+        <div class="py-5 md:py-20 lg:py-50">
           <div class="absolute w-full px-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
               <img src="/images/backgroundimg.png" alt="BackgroundImg" class="w-full h-auto" />
 
@@ -192,9 +240,32 @@
                     </div>      
                 </div>
             </div>  
-            <div class="justify-center px-10 py-5">
-              <img src="/images/companies.png" alt="Companies" class="w-full h-auto pb-10" />
-            </div>  
+            <div class="overflow-hidden relative py-10">
+              <div class="whitespace-nowrap animate-scroll flex gap-10">
+                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove" />
+                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark" />
+                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline" />
+                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision" />
+                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless" />
+                <img src="/images/vertigo.png" class="h-5 w-auto inline-block" alt="Vertigo" />
+                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 2" />
+                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 2" />
+                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 2" />
+                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 2" />
+                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 2" />
+                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 3" />
+                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 3" />
+                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 3" />
+                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 3" />
+                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 3" />
+                <img src="/images/vertigo.png" class="h-5 w-auto inline-block" alt="Vertigo 3" />
+                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 4" />
+                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 4" />
+                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 4" />
+                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 4" />
+                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 4" />
+              </div>
+            </div>
             <div class="flex flex-col items-center">
               <button class="border border-darkpurple text-darkpurple px-6 py-3 rounded-full w-auto ">
                 Utforska fler case från våra kunder
@@ -208,16 +279,20 @@
 
         <!-- white bg part -->
         <section class="bg-white py-20 relative pb-36 z-0">
-          <div class="text-black text-center p-20 md:pt-36 lg:pt-48">
+          <div class="text-black text-center p-20 md:pt-36 lg:pt-56">
               <h1 class="text-3xl font-bold font-grotesk">Hör vad våra kunder tycker om Twine</h1>
               <p class="text-sm font-grotesk">Använd Twine för att förbättra din vardag sömlöst.</p>
           </div>
 
-
-          <div class="flex gap-4 pb-10 px-4 justify-center">
-            <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
-            <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
-            <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+          <div class="overflow-hidden relative pb-20">
+            <div class="whitespace-nowrap animate-scroll flex gap-10">
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+              <img src="/images/exampleprofile.png" alt="ExampleProfile" class="w-1/4 h-auto rounded" />
+            </div>
           </div>
 
           <!-- contact us section -->
