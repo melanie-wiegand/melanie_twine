@@ -57,8 +57,19 @@
 
     </div>
 
-    <div class="relative w-full max-w-4xl mx-auto pb-48 md:pb-60 lg:pb-72">
+    <div class="relative w-full hidden md:block max-w-4xl mx-auto pb-48 md:pb-60 lg:pb-72">
       <img src="/images/flowmap.png" alt="Flow Map" class="w-full h-auto pb-10" />
+      <div class="flex flex-col items-center">
+        <button class="bg-midpurple text-white px-6 py-3 rounded-full w-auto">
+          Boka demo
+        </button>
+        <p class="text-xs text-midpurple font-grotesk py-3">Använd Twine för att förbättra din vardag sömlöst</p>
+
+      </div>
+    </div>
+
+    <div class="relative w-[80%] md:hidden max-w-4xl mx-auto pb-48 md:pb-60 lg:pb-72">
+      <img src="/images/flowmapvert.png" alt="Flow Map (Mobile)" class="w-full h-auto pb-10" />
       <div class="flex flex-col items-center">
         <button class="bg-midpurple text-white px-6 py-3 rounded-full w-auto">
           Boka demo
@@ -76,6 +87,7 @@
 
     <div class="relative z-10 text-white text-center p-10">
       <h1 class="text-4xl font-grotesk">Så hjälper vi dig att optimara din HR data</h1>
+      <p class="text-sm font-grotesk pt-5">Utforska vår lösning</p>
     </div>
   </div>
 
@@ -83,7 +95,7 @@
     <div class="relative w-full">
 
         <!-- how we help section -->
-        <section class="bg-gradient-to-b from-midpurple to-darkpurple text-white py-10 relative">
+        <section class="bg-gradient-to-b from-midpurple to-darkpurple text-white py-8 relative">
           <div class="max-w-6xl mx-auto px-4 relative">
 
             <!-- wide screen grid -->
@@ -189,7 +201,7 @@
             </block>
 
             <!-- Buttons -->
-            <div class="pt-20 lg:pt-36 flex flex-col md:flex-row justify-center gap-4 md:gap-6 lg:gap-10 max-w-xs mx-auto md:max-w-none">
+            <div class="pt-20 lg:pt-36 flex flex-row justify-center gap-4 md:gap-6 lg:gap-10 max-w-xs mx-auto md:max-w-none">
               <button class="bg-white text-darkpurple font-bold px-3 py-3 rounded-full w-full md:w-auto">Kom igång</button>
               <button class="border border-white text-white font-bold px-3 py-3 rounded-full w-full md:w-auto">Prata med oss</button>
             </div>
@@ -201,32 +213,37 @@
 
         <div class="py-5 md:py-20 lg:py-50">
           <div class="absolute w-full px-3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <img src="/images/backgroundimg.png" alt="BackgroundImg" class="w-full h-auto" />
+            <img src="/images/backgroundimg.png" alt="BackgroundImg" class="w-full h-auto" />
 
-              <div class="absolute inset-0 flex items-center">
-                  <div class="text-white text-center px-6 lg:px-20">
-                      <h1 class="text-4xl font-bold font-grotesk">Sömlöst med Twine.</h1>
-                      <p class="text-lg mt-2">Twine revolutionerar ert HR-ekosystem genom att erbjuda en egen integrationsmotor som sömlöst ansluter och synkroniserar era HR- och lönerelaterade system så ni sparar både tid och resurser.</p>
+            <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-white text-center px-6 lg:px-20 flex flex-col items-center">
+                    <h1 class="text-xl md:text-4xl font-bold font-grotesk">Sömlöst med Twine.</h1>
+                    <p class="text-sm md:text-lg mt-2 px-5">Twine revolutionerar ert HR-ekosystem genom att erbjuda en egen integrationsmotor som sömlöst ansluter och synkroniserar era HR- och lönerelaterade system så ni sparar både tid och resurser.</p>
+          
+                  <div class="flex flex-row justify-center pt-5 gap-4 md:gap-6 lg:gap-10 text-xs md:text-sm">
+                    <button class="border border-white text-white font-bold px-3 py-3 rounded-full ">Prata med oss</button>
+                    <button class="bg-midpurple text-white font-bold px-3 py-3 rounded-full">Kom igång</button>
                   </div>
-              </div>
+                </div>
+            </div>
           </div>
         </div>
 
         <!-- light purple bg section -->
-        <section class="bg-lightpurple py-10 md:py-20 lg:py-30 relative pb-10">
-            <div class="text-black text-center p-36 ">
-                <h1 class="text-3xl font-bold font-grotesk">Utforska några av våra case</h1>
-                <p class="text-sm font-grotesk">Använd Twine för att förbättra din vardag sömlöst.</p>
+        <section class="bg-lightpurple py-10 md:py-20 lg:py-30">
+            <div class="text-black text-center pt-20 pb-10 lg: py-30">
+                <h1 class="text-4xl font-bold font-grotesk">Utforska några av våra case</h1>
+                <p class="text-md font-grotesk pt-3">Använd Twine för att förbättra din vardag sömlöst.</p>
             </div>
         
             <!-- phone img next to case -->
-            <div class="mt-10 pb-16 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 max-w-6xl mx-auto px-4">  
+            <div class="mt-5 pb-16 flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 max-w-6xl mx-auto px-4">  
                 <!-- image -->
-                <div class="flex-1 flex items-center justify-center md:justify-end pl-5">
+                <div class="flex-1 flex items-center justify-center md:justify-end md:pl-5">
                     <img src="/images/phoneimg.png" alt="PhoneImg" class="w-full max-w-md h-auto object-contain" />     
                 </div>
 
-                <div class="relative max-w-xs">
+                <div class="relative max-w-md justify-center">
                     <img src="/images/lightpurplebox.png" alt="LightPurpleBox" class="w-full h-auto object-contain" />
 
                     <div class="absolute inset-2 flex flex-col items-start justify-center px-4 pt-24">
@@ -236,37 +253,37 @@
                     <h1 class="text-darkpurple text-4xl text-lg font-bold rounded p-2 text-left font-grotesk">
                     Vårt system har hjälp Fortnox genom åren
                     </h1>
-                    <p class="text-lg mt-2 text-black pb-20  ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et varius mauris. Vestibulum lacinia ipsum enim, ut aliquet massa varius eget. Morbi bibendum egestas semper. Cras feugiat orci vitae orci tempus.</p>
+                    <p class="text-lg mt-2 text-black md:pb-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et varius mauris. Vestibulum lacinia ipsum enim, ut aliquet massa varius eget. Morbi bibendum egestas semper. Cras feugiat orci vitae orci tempus.</p>
                     </div>      
                 </div>
             </div>  
             <div class="overflow-hidden relative py-10">
-              <div class="whitespace-nowrap animate-scroll flex gap-10">
-                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove" />
-                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark" />
-                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline" />
-                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision" />
-                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless" />
-                <img src="/images/vertigo.png" class="h-5 w-auto inline-block" alt="Vertigo" />
-                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 2" />
-                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 2" />
-                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 2" />
-                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 2" />
-                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 2" />
-                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 3" />
-                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 3" />
-                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 3" />
-                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 3" />
-                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 3" />
-                <img src="/images/vertigo.png" class="h-5 w-auto inline-block" alt="Vertigo 3" />
-                <img src="/images/nextmove.png" class="h-5 w-auto inline-block" alt="Nextmove 4" />
-                <img src="/images/sitemark.png" class="h-5 w-auto inline-block" alt="Sitemark 4" />
-                <img src="/images/proline.png" class="h-5 w-auto inline-block" alt="Proline 4" />
-                <img src="/images/vision.png" class="h-5 w-auto inline-block" alt="Vision 4" />
-                <img src="/images/waveless.png" class="h-5 w-auto inline-block" alt="Waveless 4" />
+              <div class="whitespace-nowrap animate-scroll flex gap-10 h-5 lg:h-8">
+                <img src="/images/nextmove.png" class=" w-auto inline-block" alt="Nextmove" />
+                <img src="/images/sitemark.png" class=" w-auto inline-block" alt="Sitemark" />
+                <img src="/images/proline.png" class=" w-auto inline-block" alt="Proline" />
+                <img src="/images/vision.png" class=" w-auto inline-block" alt="Vision" />
+                <img src="/images/waveless.png" class=" w-auto inline-block" alt="Waveless" />
+                <img src="/images/vertigo.png" class=" w-auto inline-block" alt="Vertigo" />
+                <img src="/images/nextmove.png" class=" w-auto inline-block" alt="Nextmove 2" />
+                <img src="/images/sitemark.png" class=" w-auto inline-block" alt="Sitemark 2" />
+                <img src="/images/proline.png" class=" w-auto inline-block" alt="Proline 2" />
+                <img src="/images/vision.png" class=" w-auto inline-block" alt="Vision 2" />
+                <img src="/images/waveless.png" class=" w-auto inline-block" alt="Waveless 2" />
+                <img src="/images/nextmove.png" class=" w-auto inline-block" alt="Nextmove 3" />
+                <img src="/images/sitemark.png" class=" w-auto inline-block" alt="Sitemark 3" />
+                <img src="/images/proline.png" class=" w-auto inline-block" alt="Proline 3" />
+                <img src="/images/vision.png" class=" w-auto inline-block" alt="Vision 3" />
+                <img src="/images/waveless.png" class=" w-auto inline-block" alt="Waveless 3" />
+                <img src="/images/vertigo.png" class=" w-auto inline-block" alt="Vertigo 3" />
+                <img src="/images/nextmove.png" class=" w-auto inline-block" alt="Nextmove 4" />
+                <img src="/images/sitemark.png" class=" w-auto inline-block" alt="Sitemark 4" />
+                <img src="/images/proline.png" class=" w-auto inline-block" alt="Proline 4" />
+                <img src="/images/vision.png" class=" w-auto inline-block" alt="Vision 4" />
+                <img src="/images/waveless.png" class=" w-auto inline-block" alt="Waveless 4" />
               </div>
             </div>
-            <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center pt-10 lg:pt-20">
               <button class="border border-darkpurple text-darkpurple px-6 py-3 rounded-full w-auto ">
                 Utforska fler case från våra kunder
               </button>
@@ -303,6 +320,11 @@
                 <h2 class="text-2xl sm:text-xl font-bold text-darkpurple font-grotesk mb-4">Kontakta oss</h2>
                 <p class="text-black mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ex justo, pulvinar at efficitur at, suscipit nec lacus. Morbi rutrum massa necartos imperdiet tincidunt. Vivamus quis bibendum turpis.</p>
                 
+                <!-- mobile view img -->
+                <div class="block md:hidden rounded-3xl overflow-hidden pb-10 px-12">
+                  <img src="/images/woman_mobile.png" alt="Woman (Mobile)" class="w-full h-full object-cover" />
+                </div>
+
                 <form class="space-y-6">
                     <!-- name -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
